@@ -6,7 +6,7 @@
 //});
 
 document.querySelector(".menu-trigger").addEventListener('click', function () {
-    console.log("hey");
+    'use strict';
     document.querySelector(".menu-trigger").classList.toggle('active');
 //    return false;
 });
