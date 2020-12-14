@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Verborgen Verhalen - Case Study</title>
+    <meta name="description" content="Portfolio of Digital Designer Brian Jakobs, The Netherlands. Focus on UI/UX, web design and visual design, with a passion for motion design and illustration.">
+    <script src="https://kit.fontawesome.com/bebf202147.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!--
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <scrip type="module" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></scrip>
+-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!--logo-->
+                <li>
+                    <a href="#"><img src="assets/images/logo.svg" alt="Logo Brian"></a>
+                </li>
+                <!--hamburger menu-->
+                <li>
+                    <div>
+                        <a href="#" class="menu-trigger" id="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--menu offscreen-->
+        <div>
+
+        </div>
+    </header>
+    <main>
+        <section id="landing">
+            <div class="grid">
+                <div>
+                    <h4>Case Study</h4>
+                    <h1>Verborgen Verhalen</h1>
+                </div>
+                <div>
+                    <!--
+                <model-viewer src="assets/images/model.glb" environment-image="assets/images/gym_entrance_2k.hdr" camera-orbit="0deg 88deg 7m" camera-target="0m 1.912m -0.3m">
+
+</model-viewer>
+-->
+                    <img src="assets/images/VerborgenVerhalen-thumbnail.png" alt="">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #EE4D57;
+                            }
+                        </style>
+                        <circle id="Ellipse_66" class="st0" cx="362" cy="362" r="362" />
+                    </svg>
+                </div>
+                <button>My work
+                    <i class="fas fa-long-arrow-alt-right"></i> </button>
+                <div class="socials">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="scroll"><i class="fas fa-chevron-down"></i></button>
+                <div class="back-text"><span>Brian</span></div>
+            </div>
+        </section>
+
+        <section id="intro" class="invert two-col">
+            <div class="grid">
+                <div>
+                    <h4>About the project</h4>
+                    <h1>How I can help you</h1>
+                </div>
+                <p>The months before this project I was a Visual Design intern at Driebit. I was also in my final year looking for a graduation assignment. Driebit was at this time working at the current redesigned website of the Holland Open Air Museum and where hoping to do the online collection next. This situation became a huge opportunity to start creating an entire new expierence for users to experience the online collection. So I set out to do exactly this.
+                </p>
+                <p>The Holland Open Air Museum Arnhem has an extensive digtial collection of objects related to the museum. The current website to show these objects however is not very user friendly or appealing to use.</p>
+                <button id="moreAbout">More about me
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </button>
+
+                <div>
+                    <h4>Role</h4>
+                    <ul>
+                        <li>UX Design</li>
+                        <li>UI Design</li>
+                        <li>Visual Design</li>
+                        <li>Prototyping</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Client</h4>
+                    <ul>
+                        <li>Driebit</li>
+                        <li>Het Nederlands Openlucht Museum Arnhem</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Date</h4>
+                    <ul>
+                        <li>2020 - 6 Month Long Project</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+<script src="assets/js/main.js"></script>
+
+</html>
