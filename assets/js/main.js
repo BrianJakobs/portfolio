@@ -10,14 +10,32 @@ var scrollButton = document.querySelector("#scroll"),
     workButton = document.querySelector("#landing button"),
     moreAbout = document.querySelector("#moreAbout"),
     portSpan = document.querySelector("#projects .back-text"),
-    menuTrigger = document.querySelector(".menu-trigger");
+    menuTrigger = document.querySelector(".menu-trigger"),
+    menuOverlay = document.querySelector("#menu-overlay"),
+    menuGrid = document.querySelector("#menu-overlay .grid"),
+    menuItems = document.querySelectorAll(".data ul li a");
 
 menuTrigger.addEventListener("click", function () {
     "use strict";
     menuTrigger.classList.toggle("active");
-    document.querySelector("#menu-overlay").classList.toggle("slideDown");
-//    return false;
+    menuOverlay.classList.toggle("slideDown");
+    menuGrid.classList.toggle("menuOpacity");
 });
+
+//menuItems.addEventlistener("click", function () {
+//    "use strict";
+//    for (var i = 0; i < menuItems.length; i++){
+//    menuItems[i].classList.remove("slideDown");}
+////    menuOverlay.classList.remove("slideDown");
+//});
+
+ for (var i = 0; i < menuItems.length; i++) {
+     menuItems[i].addEventListener("click", function() {
+         menuGrid.classList.remove("menuOpacity");
+         menuOverlay.classList.remove("slideDown");
+         menuTrigger.classList.remove("active");
+     });
+ }
 
 scrollButton.addEventListener("click", function() {
     gsap.to(window, {duration: 1, scrollTo:"#intro", ease:Power2.easeOut});
@@ -47,13 +65,9 @@ ScrollTrigger.create({
     end: "bottom -=200%",
     scrub: 0.2,
     pin: true
-//    snap: 1 / (section.length - 1),
-//    snap: 1 / (sections.length - 1)
-//    end: () => "+=" + document.querySelector("#projects").offsetWidth
 });
 
 const pl = gsap.timeline();
-//let sections = gsap.utils.toArray(".scrollItem");
 
 pl.to(portSpan, {left: 4000});
 

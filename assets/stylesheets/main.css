@@ -82,10 +82,7 @@ Body style
     --dark-grey-opacity: rgba(31, 31, 31, .5);
     --white-opacity: rgba(255, 255, 255, .5);
     --accent-opacity: rgba(77, 168, 238, .5);
-}
-
-#foo {
-    color: var(--main-color);
+    --transparant: rgba(255, 255, 255, .0);
 }
 
 h1 {
@@ -166,24 +163,26 @@ button i {
 
 button:hover i {
 /*    color: rgba(238, 77, 87, 1);*/
-    color: var(--white);
+    color: var(--accent);
     transform: translate(20%, 0);
 }
 
 .invert button:hover i {
-    color: var(--dark-grey);
+    color: var(--accent);
 }
 
+/*
 header {
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 99;
-    mix-blend-mode: difference;
 }
+*/
 
-
-header nav {
-    position: absolute;
+main nav {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -191,7 +190,7 @@ header nav {
     mix-blend-mode: difference;
 }
 
-header nav ul {
+main nav ul {
 /*
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -204,13 +203,13 @@ header nav ul {
     align-items: center;
 }
 
-header nav ul li:first-of-type {
+main nav ul li:first-of-type {
 /*    grid-column: 1;*/
     display: inline-block;
     width: 90px;
 }
 
-header nav ul li:last-of-type {
+main nav ul li:last-of-type {
 /*    grid-column: 12;*/
     width: 40px;
 }
@@ -275,7 +274,7 @@ Landing
     width: 40%;
 }
 
-#landing img {
+#landing .grid img {
     z-index: 2;
     position: absolute;
     top: 48%;
@@ -288,7 +287,7 @@ Landing
 /*    width: 40%;*/
 }
 
-#landing svg {
+#landing .grid svg {
     z-index: 0;
 /*    grid-column: 4/10;*/
     position: absolute;
@@ -301,7 +300,7 @@ Landing
     max-height: 75%;
 }
 
-#landing svg .st0 {
+#landing .grid svg .st0 {
     fill: var(--accent);
 }
 
@@ -349,12 +348,12 @@ Landing
 }
 
 #landing .socials li {
-    padding: 0.5em 0;
+    padding: 0.8em 0;
 }
 
 #landing .socials i {
     font-size: 1.5em;
-    color: var(--black);
+    color: var(--dark-grey);
 }
 
 #landing .socials i:hover {
@@ -749,7 +748,7 @@ Altered to my needs
     display: flex;
     height: 3px;
     transition: all .15s ease-in-out;
-/*    mix-blend-mode: difference;*/
+    cursor: pointer;
 }
 
 .menu-trigger {
@@ -757,7 +756,6 @@ Altered to my needs
 /*    width: 100%;*/
 /*  width: 50px;*/
     height: 19px;
-/*    mix-blend-mode: difference;*/
 }
 
 .menu-trigger span {
@@ -767,7 +765,6 @@ Altered to my needs
 /*  height: 3px;*/
   background-color: var(--dark-white);
 /*    rgba(203, 203, 203, 1);*/
-/*    background-blend-mode: difference;*/
 }
 
 .menu-trigger:hover
@@ -808,7 +805,7 @@ span:nth-child(2) {
 #menu-overlay {
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: fixed;
     z-index: 98;
     background-color: var(--dark-grey);
 /*    background-color: darkblue;*/
@@ -816,8 +813,17 @@ span:nth-child(2) {
     width: 100vw;
     max-width: 100%;
     left: 0;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
     top: -100vh;
+}
+
+#menu-overlay .grid {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+#menu-overlay .menuOpacity {
+    opacity: 1;
 }
 
 #menu-overlay.slideDown {
@@ -834,12 +840,26 @@ span:nth-child(2) {
 .data ul li a {
     font-family: Spartan, Arial, serif;
     font-variation-settings: "wght" 700;
-    color: var(--dark-grey);
+    color: var(--white-opacity);
     font-size: 4em;
     line-height: 1.3;
     letter-spacing: 1px;
-    color: rgba(255, 255, 255, 1);
     text-decoration-line: none;
+}
+
+.data ul li a i {
+    padding-left: 0.4em;
+    color: var(--transparant);
+    transition: all .15s ease-in-out;
+}
+
+.data ul li a:hover i {
+    color: var(--accent);
+    transform: translate(20%, 0);
+}
+
+.data ul li a:hover {
+    color: var(--white);
 }
 
 #menu-overlay .data ul li {
@@ -850,7 +870,11 @@ span:nth-child(2) {
     padding: 0;
 }
 
-#menu-overlay div:first-of-type {
+#menu-overlay .grid {
+    height: 100%;
+}
+
+#menu-overlay .grid div:first-of-type {
     grid-column: 3/6;
     grid-row: 1;
     display: flex;
@@ -858,8 +882,8 @@ span:nth-child(2) {
     justify-content: center;
 }
 
-#menu-overlay div:nth-of-type(2) {
-    grid-column: 8/11;
+#menu-overlay .grid div:nth-of-type(2) {
+    grid-column: 8/12;
     grid-row: 1;
     display: flex;
     flex-direction: column;
@@ -882,7 +906,7 @@ h3 {
     margin: 0;
 }
 
-#menu-overlay>div>a {
+#menu-overlay>.grid>div>a {
     font-family: Spartan, Arial, serif;
     font-variation-settings: "wght" 500;
     letter-spacing: 0.2px;
