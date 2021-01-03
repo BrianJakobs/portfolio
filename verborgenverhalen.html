@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Verborgen Verhalen - Case Study</title>
-    <meta name="description" content="Portfolio of Digital Designer Brian Jakobs, The Netherlands. Focus on UI/UX, web design and visual design, with a passion for motion design and illustration.">
+    <title>Verborgen Verhalen - Brian Jakobs</title>
+    <meta name="description" content="Portfolio of Digital Designer Brian Jakobs, The Netherlands. Focus on UI/UX, web design and visual design, with a passion for motion design and illustration.">    
     <script src="https://kit.fontawesome.com/bebf202147.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<!--
+    <!--
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
@@ -19,45 +19,65 @@
     <scrip type="module" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></scrip>
 -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>-->
 
 </head>
 
-<body>
+<body data-barba="wrapper">
+       <div class="loading-screen">
+           <a href="#"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
+       </div>
     <header>
-        <nav>
-            <ul>
-                <!--logo-->
-                <li>
-                    <a href="#"><img src="assets/images/logo.svg" alt="Logo Brian"></a>
-                </li>
-                <!--hamburger menu-->
-                <li>
-                    <div>
-                        <a href="#" class="menu-trigger" id="menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
         <!--menu offscreen-->
-        <div>
-
-        </div>
-    </header>
-    <main>
-        <section id="landing">
+        <section id="menu-overlay">
             <div class="grid">
+                <!--
+            <div>
+                <img src="assets/images/Brian-about.JPG" alt="menu">
+            </div>
+-->
                 <div>
-                    <h4>Case Study</h4>
+                    <h3>Contactgegevens</h3>
+                    <a href="mailto:brianjakobs@planet.nl"><i class="fas fa-paper-plane"></i>brianjakobs@planet.nl</a>
+                    <a href="tel:6-3712-6794"><i class="fas fa-phone-alt"></i>+31 6 37126794</a>
+                    <h3>Social media</h3>
+                    <a href="https://www.facebook.com/brian.jakobs.7/"><i class="fab fa-facebook"></i>Facebook</a>
+                    <a href="https://github.com/BrianJakobs"><i class="fab fa-github"></i>Github</a>
+                    <a href="https://www.instagram.com/brian.jakobs/"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="https://www.linkedin.com/in/brian-jakobs-53605a145/"><i class="fab fa-linkedin"></i>Linkedin</a>
+                    <p class="credits" © 2020 Brian Jakobs></p>
+                </div>
+                <div class="data">
+                    <ul>
+                        <li><a href="index.html#landing">Home <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="index.html#intro">Intro <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="index.html#projects">Projects <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="index.html#about">About <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="index.html#contact">Contact <i class="fas fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="projects" data-barba="container" data-barba-namespace="verborgenverhalen">
+        <section class="landing">
+            <nav class="animate-this">
+                <ul>
+                    <li>
+                        <a href="index.html"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
+                    </li>
+                    <li>
+                        <div class="menu-trigger" id="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="grid">
+                <div class="animate-this">
+                    <h4>Case study</h4>
                     <h1>Verborgen Verhalen</h1>
                 </div>
                 <div>
@@ -66,82 +86,178 @@
 
 </model-viewer>
 -->
-                    <img src="assets/images/VerborgenVerhalen-thumbnail.png" alt="">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve">
+                    <img src="assets/images/index/VerborgenVerhalen-thumbnail.png" alt="verborgen verhalen thubmnail" class="animate-this">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve" class="animate-svg">
                         <style type="text/css">
                             .st0 {
-                                fill: #EE4D57;
+                                fill: #FFFFFF;
                             }
                         </style>
                         <circle id="Ellipse_66" class="st0" cx="362" cy="362" r="362" />
                     </svg>
                 </div>
-                <button>My work
-                    <i class="fas fa-long-arrow-alt-right"></i> </button>
                 <div class="socials">
                     <ul>
                         <li>
-                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/brian.jakobs.7/"><i class="fab fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/BrianJakobs"><i class="fab fa-github"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/brian.jakobs/"><i class="fab fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/brian-jakobs-53605a145/"><i class="fab fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
                 <button id="scroll"><i class="fas fa-chevron-down"></i></button>
-                <div class="back-text"><span>Brian</span></div>
+                <div class="back-text animate-this"><span>Case</span></div>
             </div>
         </section>
 
-        <section id="intro" class="invert two-col">
+        <section class="intro invert two-col" id="projectIntro">
             <div class="grid">
                 <div>
                     <h4>About the project</h4>
-                    <h1>How I can help you</h1>
+                    <h1>A different view</h1>
                 </div>
-                <p>The months before this project I was a Visual Design intern at Driebit. I was also in my final year looking for a graduation assignment. Driebit was at this time working at the current redesigned website of the Holland Open Air Museum and where hoping to do the online collection next. This situation became a huge opportunity to start creating an entire new expierence for users to experience the online collection. So I set out to do exactly this.
-                </p>
-                <p>The Holland Open Air Museum Arnhem has an extensive digtial collection of objects related to the museum. The current website to show these objects however is not very user friendly or appealing to use.</p>
-                <button id="moreAbout">More about me
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                <p>The Holland Open Air Museum Arnhem has an extensive digital collection of objects. The  website to show these objects however was not very user friendly or appealing to use. Giving it tons of room for creative, interactive solutions. </p>
+                <button id="moreAbout">Live prototype<i class="fas fa-long-arrow-alt-right"></i>
                 </button>
-
-                <div>
-                    <h4>Role</h4>
-                    <ul>
-                        <li>UX Design</li>
-                        <li>UI Design</li>
-                        <li>Visual Design</li>
-                        <li>Prototyping</li>
-                    </ul>
+                <div class="metadata">
+                    <div>
+                        <h4>Services</h4>
+                        <ul>
+                            <li>UX Design</li>
+                            <li>UI Design</li>
+                            <li>Visual Design</li>
+                            <li>Prototyping</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Client</h4>
+                        <ul>
+                            <li>Driebit</li>
+                            <li>Het NOM Arnhem</li>
+                            <li>Het Nederlands Openlucht Museum</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Date</h4>
+                        <ul>
+                            <li>2020</li>
+                            <li>Feb - Jul</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h4>Client</h4>
-                    <ul>
-                        <li>Driebit</li>
-                        <li>Het Nederlands Openlucht Museum Arnhem</li>
-                    </ul>
+                <div class="full-image-block intro-video">
+                    <img src="assets/images/projects/verborgenverhalen/barn-empty.jpg" alt="empty barn">
                 </div>
+            </div>
+        </section>
+        <section class="two-col light-bg">
+            <div class="grid">
                 <div>
-                    <h4>Date</h4>
-                    <ul>
-                        <li>2020 - 6 Month Long Project</li>
-                    </ul>
+                    <h4>The Challenges</h4>
+                    <h2>Too much content</h2>
+                </div>
+                <p>This project started right after my internship at Driebit as my final graduation assignment. Driebit was already working on the corporate site and was hoping to do the online collection next. This situation became a huge opportunity for me to start creating an entire new experience.</p>
+                <p>The key challenges of this project where the missed wishes of the users in the past design. User wanted to browse through the collection even without having a clear goal. They also wanted to be able to experience a smaller selection in a more interactive way.</p>
+                <div class="multipe-image-block">
+                    <img src="assets/images/projects/verborgenverhalen/verborgen-start.jpg" alt="start screen">
+                    <img src="assets/images/projects/verborgenverhalen/verborgen-tutorial-1.jpg" alt="turotial page step 1">
+                    <img src="assets/images/projects/verborgenverhalen/verborgen-tutorial-2.jpg" alt="turotial page step 2">
+                    <img src="assets/images/projects/verborgenverhalen/verborgen-tutorial-3.jpg" alt="turotial finished page">
+                </div>
+            </div>
+        </section>
+        <section class="two-col">
+            <div class="grid">
+                <div>
+                    <h4>The process</h4>
+                    <h2>Hidden objects</h2>
+                </div>
+                <p>First I had to think about what I actually wanted to create. After many ideas a I settled on a concept similar to hidden object games. Where  the user needs to find objects in a room. This way I could tell the beautiful stories of the object in a fun way.</p>
+                <p>So I opened photoshop and got to work. I cut out every object and placed it in one of two rooms where that object would logically fit. Besides that I created a story for the user where it would be fitting to find object in a room to read the story of that object.</p>
+                <div class="long-image-block">
+                    <img src="assets/images/projects/verborgenverhalen/object-story-full.jpg" alt="full screen of one object with text and photos">
+                </div>
+            </div>
+        </section>
+        <section class="invert intro two-col">
+            <div class="grid">
+                <div>
+                    <h4>The results</h4>
+                    <h2>Introduction through games</h2>
+                </div>
+                <p>The result is a stand-alone website specifically tailored to introduce the visitors of the corporate website to the concept of a complete online collection. To do this I created a fun experience without the overwhelming amount of all the 153.000 objects.</p>
+                <p>The user will first be introduced by the character farmer Simon, who sets the scene. After that the user enters a room where they can click on different objects. The user will then go to a in-depth story of the object itself with interactive elements to keep the users attention.</p>
+                <div class="full-image-block">
+                    <img src="assets/images/projects/verborgenverhalen/barn-progress.jpg" alt="barn with some objects collected">
+                </div>
+                <div class="multipe-image-block combination-block">
+                    <img src="assets/images/projects/verborgenverhalen/room-progress.jpg" alt="">
+                    <img src="assets/images/projects/verborgenverhalen/object-zoom.jpg" alt="">
+                    <img src="assets/images/projects/verborgenverhalen/collection-empty.jpg" alt="">
+                    <img src="assets/images/projects/verborgenverhalen/collection-progress.jpg" alt="">
+                </div>
+                <p class="lastP">By keeping track of which objects the user has found, three categories can be made. When all the objects within a category get found the user will be rewarded with an extra story which leads naturally to the rest of the collection, and thus always offering the user a next step.</p>
+                <div class="full-image-block">
+                    <img src="assets/images/projects/verborgenverhalen/object-story.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="moreProjects" class="two-col">
+            <div class="grid">
+                <div>
+                    <h4>Bekijk ook</h4>
+                    <h1>Meer projecten</h1>
+                </div>
+                <div class="light-bg">
+                    <div>
+                        <h2>Where's my money?</h2>
+                        <a href="repertoire.html">
+                            <button>
+                                Next project<i class="fas fa-long-arrow-alt-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                    <div>
+                    <img src="assets/images/index/Repertoire-thumbnail.png" alt="Repertoire thumbnail">
+                    </div>
+                        <!--                <div class="back-text"><span>Say Hi</span></div>-->
+                    
                 </div>
             </div>
         </section>
     </main>
     <footer>
-
+        <div class="grid">
+            <div>
+                <h4>Contactgegevens</h4>
+                <a href="mailto:brianjakobs@planet.nl"><i class="fas fa-paper-plane"></i>brianjakobs@planet.nl</a>
+                <a href="tel:6-3712-6794"><i class="fas fa-phone-alt"></i>+31 6 37126794</a>
+            </div>
+            <div>
+                <h4>Social media</h4>
+                <a href="https://www.facebook.com/brian.jakobs.7/"><i class="fab fa-facebook"></i>Facebook</a>
+                <a href="https://github.com/BrianJakobs"><i class="fab fa-github"></i>Github</a>
+                <a href="https://www.instagram.com/brian.jakobs/"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="https://www.linkedin.com/in/brian-jakobs-53605a145/"><i class="fab fa-linkedin"></i>Linkedin</a>
+                <p class="credits" © 2020 Brian Jakobs></p>
+            </div>
+        </div>
     </footer>
 </body>
 
+<!--<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 <script src="assets/js/main.js"></script>
 
 </html>
