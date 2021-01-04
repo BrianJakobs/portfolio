@@ -23,10 +23,10 @@
 
 </head>
 
-<body data-barba="wrapper">
-       <div class="loading-screen">
-           <a href="#"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
-       </div>
+<body>
+       <div class="loading-screen transition transition-1 isActive">
+            <a href="#"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
+        </div>
     <header>
         <!--menu offscreen-->
         <section id="menu-overlay">
@@ -59,12 +59,12 @@
             </div>
         </section>
     </header>
-    <main class="projects" data-barba="container" data-barba-namespace="fromiraktoholland">
+    <main>
         <section class="landing">
-            <nav>
+            <nav class="animate-this">
                 <ul>
                     <li>
-                        <a href="index.html"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
+                        <a href="index.html" class="newPage" id="homeLogo"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
                     </li>
                     <li>
                         <div class="menu-trigger" id="menu">
@@ -76,7 +76,7 @@
                 </ul>
             </nav>
             <div class="grid">
-                <div>
+                <div class="animate-this">
                     <h4>Case study</h4>
                     <h1>From Irak to Holland</h1>
                 </div>
@@ -86,7 +86,7 @@
 
 </model-viewer>
 -->
-                    <img src="assets/images/index/Correspondent-thumbnail.png" alt="From Irak to Holland thumbnail">
+                    <img src="assets/images/index/Correspondent-thumbnail.png" alt="From Irak to Holland thumbnail" class="animate-this">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -117,7 +117,7 @@
             </div>
         </section>
 
-        <section class="intro invert two-col" id="projectIntro">
+        <section class="intro invert two-col scrollTo" id="projectIntro">
             <div class="grid">
                 <div>
                     <h4>About the project</h4>
@@ -210,10 +210,8 @@
                 <div class="light-bg">
                     <div>
                         <h2>Verborgen Verhalen</h2>
-                        <a href="verborgenverhalen.html">
-                            <button>
+                        <a href="verborgenverhalen.html" class="newPage">
                                 Next project<i class="fas fa-long-arrow-alt-right"></i>
-                            </button>
                         </a>
                     </div>
                     <div>
@@ -248,8 +246,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/@barba/core"></script>
-<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 <script src="assets/js/main.js"></script>
 
 </html>

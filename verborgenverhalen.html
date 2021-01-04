@@ -23,10 +23,10 @@
 
 </head>
 
-<body data-barba="wrapper">
-       <div class="loading-screen">
-           <a href="#"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
-       </div>
+<body>
+       <div class="loading-screen loading-screen transition transition-1 isActive">
+            <a href="#"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
+        </div>
     <header>
         <!--menu offscreen-->
         <section id="menu-overlay">
@@ -59,12 +59,12 @@
             </div>
         </section>
     </header>
-    <main class="projects" data-barba="container" data-barba-namespace="verborgenverhalen">
+    <main>
         <section class="landing">
             <nav class="animate-this">
                 <ul>
                     <li>
-                        <a href="index.html"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
+                        <a href="index.html" class="newPage" id="homeLogo"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
                     </li>
                     <li>
                         <div class="menu-trigger" id="menu">
@@ -117,7 +117,7 @@
             </div>
         </section>
 
-        <section class="intro invert two-col" id="projectIntro">
+        <section class="intro invert two-col scrollTo" id="projectIntro">
             <div class="grid">
                 <div>
                     <h4>About the project</h4>
@@ -218,10 +218,8 @@
                 <div class="light-bg">
                     <div>
                         <h2>Where's my money?</h2>
-                        <a href="repertoire.html">
-                            <button>
+                        <a href="repertoire.html" class="newPage">
                                 Next project<i class="fas fa-long-arrow-alt-right"></i>
-                            </button>
                         </a>
                     </div>
                     <div>
@@ -256,8 +254,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/@barba/core"></script>
-<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 <script src="assets/js/main.js"></script>
 
 </html>
