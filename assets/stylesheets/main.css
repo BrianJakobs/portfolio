@@ -22,6 +22,7 @@ Reset
 body {
     line-height: 1;
     font-size: calc(12px + .35vw);
+/*    overflow-x: hidden;*/
 }
 
 ol,
@@ -1555,4 +1556,28 @@ main section.panel span.show {
 }
 */
     
+}
+
+.cursor-outer {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    z-index: 9998;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+}
+
+.cursor-inner {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: var(--white);
+    border-radius: 50%;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition-timing-function: ease-out;
+    pointer-events: none; 
 }

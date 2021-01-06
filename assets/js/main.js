@@ -3,11 +3,16 @@ var scrollButton = document.querySelector("#scroll"),
     moreAbout = document.querySelector("#moreAbout"),
     portSpan = document.querySelector("#projects .back-text"),
     menuTrigger = document.querySelector(".menu-trigger"),
+    docBody = document.querySelector("body"),
+    actualInnerWidth = document.body.clientWidth,
     menuOverlay = document.querySelector("#menu-overlay"),
+    cursorOuter = document.querySelector(".cursor-outer"), 
+    cursorInner = document.querySelector(".cursor-inner"),
     menuGrid = document.querySelector("#menu-overlay .grid"),
     menuItems = document.querySelectorAll(".data ul li a"),
+    
     el = document.createElement("output");
-
+    
 
 document.body.append(el);
 Object.assign(el.style, {
@@ -83,9 +88,15 @@ gsap.registerPlugin(ScrollTrigger);
 //    menuTrigger.addEventListener("click", menuNav);
 //});
 
+function checkWidth () {
+    actualInnerWidth = document.body.clientWidth,
+    console.log(actualInnerWidth);
+}
+
 window.addEventListener('resize', function() {
     var newWidth = window.innerWidth;
     var newHeight = window.innerHeight;
+    checkWidth();
     
     if (newWidth > 1000) {
         console.log("This is good");
@@ -93,6 +104,24 @@ window.addEventListener('resize', function() {
     console.log("too small");
 }
 });
+
+document.addEventListener('mousemove', function(e) {
+    console.log(e.clientX);
+    console.log(docBody);
+    checkWidth();
+    cursorOuter.setAttribute("style", "top: "+(e.clientY - 10 +"px; left: "+(e.clientX - 10)+"px;"));
+    
+    cursorInner.setAttribute("style", "top: "+(e.clientY - 4)+"px; left: "+(e.clientX - 4)+"px;");
+    
+    if (e.clientX > (actualInnerWidth - 10)) {
+        cursorOuter.setAttribute("style", "width: 0px; height: 0px; opacity: 0;");
+        cursorInner.setAttribute("style", "width: 0px; height: 0px; opacity: 0;");
+        docBody.setAttribute("style", "cursor: normal;");
+    } else {
+        docBody.setAttribute("style", "cursor: none;");
+    }
+    
+})
 
 function delay(n) {
     n = n || 2000;
@@ -161,12 +190,12 @@ function pageTransition() {
 function contentAnimation() {
     var tl = gsap.timeline();
     tl.from(".animate-this", {
-        duration: 0.6,
-        y: 20,
+        duration: 1.2,
+        y: 50,
         autoAlpha: 0,
 //        delay: 0.2,
         stagger: 0.2,
-        ease: Power4.easeInOut,
+        ease: Power2.easeInOut,
 //        duration: 1,
 //        yPercent: -50,
 //        opacity: 0,
@@ -178,7 +207,7 @@ function contentAnimation() {
         duration: 1.2,
         width: 200,
         autoAlpha: 0,
-        ease: Power4.easeOut,
+        ease: Power2.easeOut,
     });
 }
 
@@ -240,7 +269,7 @@ window.addEventListener('load', function() {
     
     setTimeout(() => {
             contentAnimation();
-        }, 300);
+        }, 350);
     
 //    for (let x = 0; x < animateIn.length; x++) {
 //        const singleAnimateIn = animateIn[i];
