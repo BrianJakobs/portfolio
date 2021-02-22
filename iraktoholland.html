@@ -61,7 +61,7 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="projects">
         <section class="landing">
             <nav class="animate-this">
                 <ul>
@@ -82,19 +82,27 @@
                     <h4>Case study</h4>
                     <h1>From Irak to Holland</h1>
                 </div>
-                <div>
+                <div class="parallaxContainer">
                     <!--
                 <model-viewer src="assets/images/model.glb" environment-image="assets/images/gym_entrance_2k.hdr" camera-orbit="0deg 88deg 7m" camera-target="0m 1.912m -0.3m">
 
 </model-viewer>
 -->
-                    <img src="assets/images/index/Correspondent-thumbnail.png" alt="From Irak to Holland thumbnail" class="animate-this">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve">
+                    <img src="assets/images/index/Correspondent-thumbnail.png" alt="From Irak to Holland thumbnail" class="animate-this parallaxMouse" data-speed="4">
+                </div>
+                   <div class="parallaxContainer">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve" class="animate-svg parallaxMouse" data-speed="2">
                         <style type="text/css">
                             .st0 {
-                                fill: #FFFFFF;
+                                fill: url(#MyGradient);
                             }
                         </style>
+                        <defs>
+        <radialGradient id="MyGradient">
+          <stop offset="0%" stop-color="var(--color-stop-1)" />
+          <stop offset="100%" stop-color="var(--color-stop-2)" />
+        </radialGradient>
+      </defs>
                         <circle id="Ellipse_66" class="st0" cx="362" cy="362" r="362" />
                     </svg>
                 </div>
@@ -123,40 +131,40 @@
             <div class="grid">
                 <div>
                     <h4>About the project</h4>
-                    <h1>A different view</h1>
+                    <h1>Making it come to life</h1>
                 </div>
                 <p>Making a story come to life means more than just adding a picture next to the text. In this assignment I was assigned to make the story come to life by giving the story a unique visual style and feeling and adding interaction that complements the story.
-                </p>
-                <button id="moreAbout">Live prototype<i class="fas fa-long-arrow-alt-right"></i>
-                </button>
+                </p>                    
+                <a href="https://brianjakobs.github.io/meesterproef/" class="newPage appear liveProto">
+                                Live prototype<i class="fas fa-long-arrow-alt-right"></i>
+                </a>
                 <div class="metadata">
                     <div>
                         <h4>Services</h4>
                         <ul>
-                            <li>UX Design</li>
                             <li>UI Design</li>
                             <li>Visual Design</li>
-                            <li>Prototyping</li>
+                            <li>Illustration</li>
+                            <li>Coding</li>
                         </ul>
                     </div>
                     <div>
                         <h4>Client</h4>
                         <ul>
-                            <li>Driebit</li>
-                            <li>Het NOM Arnhem</li>
-                            <li>Het Nederlands Openlucht Museum</li>
+                            <li>HvA</li>
+                            <li>De Correspondent</li>
                         </ul>
                     </div>
                     <div>
                         <h4>Date</h4>
                         <ul>
-                            <li>2020</li>
-                            <li>Feb - Jul</li>
+                            <li>2019</li>
+                            <li>Jun</li>
                         </ul>
                     </div>
                 </div>
-                <div class="full-image-block intro-video">
-                    <img src="assets/images/projects/iraktoholland/iraktoholland-landing.jpg" alt="Homepage of From Irak to Holland">
+                <div class="single-image-block video">
+                    <iframe src="https://player.vimeo.com/video/515427322" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -164,12 +172,12 @@
             <div class="grid">
                 <div>
                     <h4>The Challenges</h4>
-                    <h2>Too much content</h2>
+                    <h2>Giving it more emotion</h2>
                 </div>
                 <p>The main goal of the project was finding a better way to present the written story. I had full freedom In what I wanted to create. This freedom was nice to have, but also daunting. Figuring out what direction I wanted the project to go was the biggest hurdle to get past.</p>
                 <p>The text is an emotional journey, its not about numbers or just another news article, but is more an autobiographical story. Because of this I wanted to add more content in the form of illustrations and other article that add to the story itself.</p>
                 <div class="single-image-block">
-                    <img src="assets/images/projects/iraktoholland/iraktoholland-section.jpg" alt="section of the website">
+                    <img src="assets/images/projects/iraktoholland/sidescroll-section.jpg" alt="section of the website">
                 </div>
             </div>
         </section>
@@ -177,9 +185,9 @@
             <div class="grid">
                 <div>
                     <h4>The process</h4>
-                    <h2>Hidden in plain sight</h2>
+                    <h2>Illustrating the key moments</h2>
                 </div>
-                <p>The make the reader stop and think about what just happened, I wanted to confront them with a moral question. What would you do in this kind of situation? By placing the reader in the position of the main character, they get a better understanding of the situation. Making it more personal.</p>
+                <p>To make the reader stop and think about what just happened, I wanted to confront them with a moral question. What would you do in this kind of situation? By placing the reader in the position of the main character, they get a better understanding of the situation. Making it more personal.</p>
                 <p>I illustrated key moments in black and white adding just a splash of colour for a more dramatic effect. When coding it I also wanted to add a little bit of motion to bring the story more to life.</p>
                 <div class="long-image-block">
                     <img src="assets/images/projects/iraktoholland/iraktoholland-full.jpg" alt="full design of From Irak to Holland">
@@ -190,15 +198,15 @@
             <div class="grid">
                 <div>
                     <h4>The results</h4>
-                    <h2>Introduction through games</h2>
+                    <h2>Adding impact through visuals</h2>
                 </div>
                 <p>The result is a prototype website designed and coded in a short timeframe. It’s a proof of concept, where adding illustration, interaction and motion can make a story come to life.</p>
                 <p>This project showed to me that creating a good visual style can add a lot to the overall experience of a story. The prototype is not responsive and works best on a 15 inch screen.</p>
                 <div class="single-image-block">
                     <img src="assets/images/projects/iraktoholland/iraktoholland-section.jpg" alt="section of the website">
                 </div>
-<!--                <p class="lastP">By keeping track of which objects the user has found, three categories can be made. When all the objects within a category get found the user will be rewarded with an extra story which leads naturally to the rest of the collection, and thus always offering the user a next step.</p>-->
-                <div class="full-image-block">
+                <p class="lastP">This is one of the few prototypes I code using HTML, CSS and JS. It gave me a good understanding of setting up a a webpage using things like CSS grid and it's limitations.</p>
+                <div class="single-image-block last-image">
                     <img src="assets/images/projects/iraktoholland/iraktoholland-landing.jpg" alt="">
                 </div>
             </div>
@@ -241,6 +249,7 @@
                 <p class="credits" © 2020 Brian Jakobs></p>
             </div>
         </div>
+        <p>Designed & coded by Brian Jakobs © 2021</p>
     </footer>
 </body>
 

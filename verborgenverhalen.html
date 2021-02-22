@@ -24,7 +24,7 @@
 </head>
 
 <body>
-       <div class="loading-screen loading-screen transition transition-1 isActive">
+       <div class="loading-screen transition transition-1 isActive">
             <a href="#"><img src="assets/images/index/logo.svg" alt="Logo Brian"></a>
         </div>
         <div class="cursor-outer"></div>
@@ -61,7 +61,7 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="projects">
         <section class="landing">
             <nav class="animate-this">
                 <ul>
@@ -82,21 +82,30 @@
                     <h4>Case study</h4>
                     <h1>Verborgen Verhalen</h1>
                 </div>
-                <div>
+                <div class="parallaxContainer">
                     <!--
                 <model-viewer src="assets/images/model.glb" environment-image="assets/images/gym_entrance_2k.hdr" camera-orbit="0deg 88deg 7m" camera-target="0m 1.912m -0.3m">
 
 </model-viewer>
 -->
-                    <img src="assets/images/index/VerborgenVerhalen-thumbnail.png" alt="verborgen verhalen thubmnail" class="animate-this">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve" class="animate-svg">
+                    <img src="assets/images/index/VerborgenVerhalen-thumbnail.png" alt="verborgen verhalen thubmnail" class="animate-this parallaxMouse" data-speed="4">
+                    </div>
+                    <div class="parallaxContainer">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve" class="animate-svg parallaxMouse" data-speed="2">
                         <style type="text/css">
                             .st0 {
-                                fill: #FFFFFF;
+                                fill: url(#MyGradient);
                             }
                         </style>
+                        <defs>
+        <radialGradient id="MyGradient">
+          <stop offset="0%" stop-color="var(--color-stop-1)" />
+          <stop offset="100%" stop-color="var(--color-stop-2)" />
+        </radialGradient>
+      </defs>
                         <circle id="Ellipse_66" class="st0" cx="362" cy="362" r="362" />
                     </svg>
+                    </div>
                 </div>
                 <div class="socials">
                     <ul>
@@ -116,7 +125,6 @@
                 </div>
                 <button id="scroll"><i class="fas fa-chevron-down"></i></button>
                 <div class="back-text animate-this"><span>Case</span></div>
-            </div>
         </section>
 
         <section class="intro invert two-col scrollTo" id="projectIntro">
@@ -125,9 +133,10 @@
                     <h4>About the project</h4>
                     <h1>A different view</h1>
                 </div>
-                <p>The Holland Open Air Museum Arnhem has an extensive digital collection of objects. The  website to show these objects however was not very user friendly or appealing to use. Giving it tons of room for creative, interactive solutions. </p>
-                <button id="moreAbout">Live prototype<i class="fas fa-long-arrow-alt-right"></i>
-                </button>
+                <p>The Holland Open Air Museum Arnhem has an extensive digital collection of objects. The website to show these objects however was not very user friendly or appealing to use. Giving it tons of room for creative, interactive solutions.</p>
+                <a href="https://xd.adobe.com/view/42a8c03e-5a70-4764-5632-6bb725e11b64-3499/?fullscreen" class="newPage appear liveProto">
+                                Live prototype<i class="fas fa-long-arrow-alt-right"></i>
+                </a>
                 <div class="metadata">
                     <div>
                         <h4>Services</h4>
@@ -142,7 +151,6 @@
                         <h4>Client</h4>
                         <ul>
                             <li>Driebit</li>
-                            <li>Het NOM Arnhem</li>
                             <li>Het Nederlands Openlucht Museum</li>
                         </ul>
                     </div>
@@ -154,8 +162,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="full-image-block intro-video">
-                    <img src="assets/images/projects/verborgenverhalen/barn-empty.jpg" alt="empty barn">
+                <div class="single-image-block video">
+                    <iframe src="https://player.vimeo.com/video/515341290" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -196,7 +204,7 @@
                 </div>
                 <p>The result is a stand-alone website specifically tailored to introduce the visitors of the corporate website to the concept of a complete online collection. To do this I created a fun experience without the overwhelming amount of all the 153.000 objects.</p>
                 <p>The user will first be introduced by the character farmer Simon, who sets the scene. After that the user enters a room where they can click on different objects. The user will then go to a in-depth story of the object itself with interactive elements to keep the users attention.</p>
-                <div class="full-image-block">
+                <div class="single-image-block">
                     <img src="assets/images/projects/verborgenverhalen/barn-progress.jpg" alt="barn with some objects collected">
                 </div>
                 <div class="multipe-image-block combination-block">
@@ -206,7 +214,7 @@
                     <img src="assets/images/projects/verborgenverhalen/collection-progress.jpg" alt="">
                 </div>
                 <p class="lastP">By keeping track of which objects the user has found, three categories can be made. When all the objects within a category get found the user will be rewarded with an extra story which leads naturally to the rest of the collection, and thus always offering the user a next step.</p>
-                <div class="full-image-block">
+                <div class="single-image-block last-image">
                     <img src="assets/images/projects/verborgenverhalen/object-story.jpg" alt="">
                 </div>
             </div>
@@ -249,6 +257,7 @@
                 <p class="credits" © 2020 Brian Jakobs></p>
             </div>
         </div>
+        <p>Designed & coded by Brian Jakobs © 2021</p>
     </footer>
 </body>
 

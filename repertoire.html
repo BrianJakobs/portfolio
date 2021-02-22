@@ -61,7 +61,7 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="projects">
         <section class="landing">
             <nav class="animate-this">
                 <ul>
@@ -82,19 +82,27 @@
                     <h4>Case study</h4>
                     <h1>Where's my money?</h1>
                 </div>
-                <div>
+                <div class="parallaxContainer">
                     <!--
                 <model-viewer src="assets/images/model.glb" environment-image="assets/images/gym_entrance_2k.hdr" camera-orbit="0deg 88deg 7m" camera-target="0m 1.912m -0.3m">
 
 </model-viewer>
 -->
-                    <img src="assets/images/index/Repertoire-thumbnail.png" alt="Repertoire thumbnail" class="animate-this">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve">
+                    <img src="assets/images/index/Repertoire-thumbnail.png" alt="Repertoire thumbnail" class="animate-this parallaxMouse" data-speed="4">
+                    </div>
+                    <div class="parallaxContainer">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 724.4 723.1" style="enable-background:new 0 0 724.4 723.1;" xml:space="preserve" class="animate-svg parallaxMouse" data-speed="2">
                         <style type="text/css">
                             .st0 {
-                                fill: #FFFFFF;
+                                fill: url(#MyGradient);
                             }
                         </style>
+                        <defs>
+        <radialGradient id="MyGradient">
+          <stop offset="0%" stop-color="var(--color-stop-1)" />
+          <stop offset="100%" stop-color="var(--color-stop-2)" />
+        </radialGradient>
+      </defs>
                         <circle id="Ellipse_66" class="st0" cx="362" cy="362" r="362" />
                     </svg>
                 </div>
@@ -123,39 +131,38 @@
             <div class="grid">
                 <div>
                     <h4>About the project</h4>
-                    <h1>A different view</h1>
+                    <h1>Redefine the system</h1>
                 </div>
-                <p>The music industry is creative and fun, but behind the scenes it can get a bit messy. Repertoire is a company trying to improve the current system of paying out royalties to all parties involved. </p>
-                <button id="moreAbout">Live prototype<i class="fas fa-long-arrow-alt-right"></i>
-                </button>
+                <p>The music industry is creative and fun, but behind the scenes it can get a bit messy. Repertoire is a company trying to improve the current system of paying out royalties to all parties involved.</p>
+                <a href="https://brianjakobs.github.io/information-design/" class="newPage appear liveProto">
+                                Live prototype<i class="fas fa-long-arrow-alt-right"></i>
+                </a>
                 <div class="metadata">
                     <div>
                         <h4>Services</h4>
                         <ul>
-                            <li>UX Design</li>
                             <li>UI Design</li>
                             <li>Visual Design</li>
-                            <li>Prototyping</li>
+                            <li>Motion Design</li>
+                            <li>Copywriting</li>
                         </ul>
                     </div>
                     <div>
                         <h4>Client</h4>
                         <ul>
-                            <li>Driebit</li>
-                            <li>Het NOM Arnhem</li>
-                            <li>Het Nederlands Openlucht Museum</li>
+                            <li>Repertoire</li>
                         </ul>
                     </div>
                     <div>
                         <h4>Date</h4>
                         <ul>
-                            <li>2020</li>
-                            <li>Feb - Jul</li>
+                            <li>2018 - 2019</li>
+                            <li>Dec - Jan</li>
                         </ul>
                     </div>
                 </div>
-                <div class="full-image-block intro-video">
-                    <img src="assets/images/projects/repertoire/repertoire-section.jpg" alt="Section of the webpage">
+                <div class="single-image-block video">
+                    <iframe src="https://player.vimeo.com/video/515341501" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -163,7 +170,7 @@
             <div class="grid">
                 <div>
                     <h4>The Challenges</h4>
-                    <h2>Too much content</h2>
+                    <h2>Complex content</h2>
                 </div>
                 <p>Repertoire wants to not only pay all parties involved but make the way royalties are divided and stored better and more transparent. A big part of doing this is explaining clearly how all parties are connected and how the royalties of a song are divided.</p>
                 <p>Getting to understand how everything works and explaining this properly was definitely the hardest challenge to tackle. We tried to tackle this challenge by giving real world examples and giving animations to compliment and add to the textual explanation.</p>
@@ -176,7 +183,7 @@
             <div class="grid">
                 <div>
                     <h4>The process</h4>
-                    <h2>Hidden in plain sight</h2>
+                    <h2>Figuring out the industry</h2>
                 </div>
                 <p>Early on in the process we had close contact with Repertoire in order to get the story and script just right. After that we were able to set up our interactive scrolly telling website where the user sees a new animation alongside the corresponding text.</p>
                 <p>After designing and coding the prototype we tested our prototype with the users (musicians). The test made clear that mainly the parties who creatively work on the music are the ones who benefited of our concept the most.</p>
@@ -189,7 +196,7 @@
             <div class="grid">
                 <div>
                     <h4>The results</h4>
-                    <h2>Introduction through games</h2>
+                    <h2>Explaining by example</h2>
                 </div>
                 <p>The result of the website is a new page that would live alongside the existing pages of the website. It would be a way for Repertoire to clearly explain the benefit of their product to their users, which was something they were missing on their website.</p>
                 <p>Fitting both visually and conceptually to Repertoire the concept website would be a valuable addition to the website of Repertoire. It is a simple, yet strong way of explaining the current problems Repertoire is trying to solve and how they are planning to do so.</p>
@@ -197,8 +204,8 @@
                     <img src="assets/images/projects/repertoire/repertoire-section.jpg" alt="">
                 </div>
 <!--                <p class="lastP">By keeping track of which objects the user has found, three categories can be made. When all the objects within a category get found the user will be rewarded with an extra story which leads naturally to the rest of the collection, and thus always offering the user a next step.</p>-->
-                <div class="full-image-block">
-                    <img src="assets/images/projects/repertoire/repertoire-section.jpg" alt="">
+                <div class="single-image-block video last-image">
+                    <iframe src="https://player.vimeo.com/video/515427700" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -240,6 +247,7 @@
                 <p class="credits" © 2020 Brian Jakobs></p>
             </div>
         </div>
+        <p>Designed & coded by Brian Jakobs © 2021</p>
     </footer>
 </body>
 
