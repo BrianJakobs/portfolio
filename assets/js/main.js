@@ -7,9 +7,7 @@ var scrollButton = document.querySelector("#scroll"),
     docBody = document.querySelector("body"),
     actualInnerWidth = document.body.clientWidth,
     menuOverlay = document.querySelector("#menu-overlay"),
-    cursorOuter = document.querySelector(".cursor-outer"),
-    cursorInner = document.querySelector(".cursor-inner"),
-    menuGrid = document.querySelector("#menu-overlay .grid"),
+       menuGrid = document.querySelector("#menu-overlay .grid"),
     menuItems = document.querySelectorAll(".data ul li a"),
     toggle = document.querySelector(".switch input"),
     parallaxItems = document.querySelectorAll(".parallaxMouse"),
@@ -33,23 +31,6 @@ function themeMode() {
         theme = "dark";
     }
     sessionStorage.setItem("theme", theme);
-}
-
-document.body.append(el);
-Object.assign(el.style, {
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    background: "red",
-    color: "white",
-    padding: "5px",
-    fontSize: "11px",
-    opacity: 0.7
-});
-
-function updateOutput() {
-    var html = document.documentElement;
-    el.value = html.clientWidth + " × " + html.clientHeight;
 }
 
 window.addEventListener('load', function () {
@@ -105,9 +86,6 @@ window.addEventListener('load', function () {
     }
 
 });
-
-window.addEventListener("resize", updateOutput);
-updateOutput();
 
 function menuNav() {
     menuTrigger.classList.toggle("active");
@@ -208,16 +186,29 @@ ScrollTrigger.matchMedia({
 
 });
 
+function parallax(e) {
+    for (var i = 0; i < parallaxItems.length; i++) {
+        const speed = parallaxItems[i].getAttribute('data-speed');
+        const x = (window.innerWidth / 2 - e.pageX) / 100 * speed;
+        const y = (window.innerHeight / 2 - e.pageY) / 100 * speed;
+            
+        parallaxItems[i].style.transform = "translate(" + x + "px, " + y + "px)";
+    }
+}
+
 function small() {
     console.log("small");
-    var lottiePlayer = document.querySelector('lottie-player');
-
-    lottiePlayer.addEventListener('stop', pause());
-    document.body.setAttribute("style", "cursor: normal;");
+    
+    document.removeEventListener("mousemove", parallax);
+    
+    document.querySelector('lottie-player').addEventListener('stop', pause());
 }
 
 function large() {
     console.log("large");
+
+    document.addEventListener("mousemove", parallax);
+    
     LottieInteractivity.create({
         renderer: 'canvas',
         player: '#firstLottie',
@@ -233,32 +224,6 @@ function large() {
                 frames: [0, 60],
             },
         ],
-    });
-
-    document.addEventListener('mousemove', function (e) {
-        cursorOuter.setAttribute("style", "top: " + (e.clientY - 10 + "px; left: " + (e.clientX - 10) + "px;"));
-        cursorInner.setAttribute("style", "top: " + (e.clientY - 4) + "px; left: " + (e.clientX - 4) + "px;");
-
-        if (e.clientX > (actualInnerWidth - 10)) {
-            cursorOuter.setAttribute("style", "width: 0px; height: 0px; opacity: 0;");
-            cursorInner.setAttribute("style", "width: 0px; height: 0px; opacity: 0;");
-            docBody.setAttribute("style", "cursor: normal;");
-        } else {
-            docBody.setAttribute("style", "cursor: none;");
-        }
-
-    })
-
-    document.addEventListener("mousemove", function (e) {
-        for (var i = 0; i < parallaxItems.length; i++) {
-            const speed = parallaxItems[i].getAttribute('data-speed');
-            const x = (window.innerWidth / 2 - e.pageX) / 100 * speed;
-            const y = (window.innerHeight / 2 - e.pageY) / 100 * speed;
-
-            parallaxItems[i].style.transform = "translate(" + x + "px, " + y + "px)";
-
-        }
-
     });
 }
 
