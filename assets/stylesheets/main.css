@@ -53,7 +53,7 @@ Body style
     --bg-gradient-end: rgba(236, 238, 242, 1);
     --bg-span: rgba(245, 246, 247, 1);
     --text: rgba(31, 31, 31, 1);
-    --text-light: rgba(168, 168, 168, 1);
+    --text-light: rgba(117, 117, 117, 1);
     --invert-bg: rgba(31, 31, 31, 1);
     --invert-bg-gradient: rgba(24, 24, 24, 1);
     --invert-bg-span: rgba(24, 24, 24, 1);
@@ -87,7 +87,7 @@ body.dark-theme {
     --invert-bg: rgba(31, 31, 31, 1);
     --invert-bg-gradient: rgba(24, 24, 24, 1);
     --invert-bg-span: rgba(24, 24, 24, 1);
-    --invert-text: rgba(168, 168, 168, 1);
+    --invert-text: rgba(255, 255, 255, 1);
     --invert-white: rgba(255, 255, 255, 1);
     --invert-black: rgba(24, 24, 24, 1);
     --invert-button: rgba(255, 255, 255, 1);
@@ -203,6 +203,7 @@ button,
     padding: 0.75em 1em;
     z-index: 3;
     cursor: pointer;
+    outline:none;
 }
 
 .newPage:not(#homeLogo).liveProto {
@@ -557,18 +558,20 @@ Intro
 
 .two-col .grid p {
     grid-column: 2/7;
-    color: var(--text-light);
-    grid-row: 2;
+/*    grid-row: 2;*/
+    margin: 3em 0 0 0;
+    z-index: 3;
+}
+
+.two-col .grid p:nth-of-type(2),
+.two-col .grid p:nth-of-type(4) {
+    grid-column: 7/12;
     margin: 3em 0 0 0;
     z-index: 3;
 }
 
 .two-col .grid p:nth-of-type(2) {
-    grid-column: 7/12;
-    color: var(--text-light);
     grid-row: 2;
-    margin: 3em 0 0 0;
-    z-index: 3;
 }
 
 .two-col .grid .metadata {
@@ -838,50 +841,6 @@ Contact
     overflow: hidden;
 }
 
-#contact .grid img.wave {
-    -webkit-animation: wave-hand 4s infinite;
-    -moz-animation: wave-hand 4s infinite;
-    -o-animation: wave-hand 4s infinite;
-    animation: wave-hand 4s infinite;
-    height: 90vh;
-    transform-origin: center;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes wave-hand {
-    0% {
-        transform: rotate(0.0deg) translate(0, -50%)
-    }
-
-    10% {
-        transform: rotate(20.0deg) translate(0, -50%)
-    }
-
-    20% {
-        transform: rotate(-10.0deg) translate(0, -50%)
-    }
-
-    30% {
-        transform: rotate(20.0deg) translate(0, -50%)
-    }
-
-    40% {
-        transform: rotate(-6.0deg) translate(0, -50%)
-    }
-
-    50% {
-        transform: rotate(12.0deg) translate(0, -50%)
-    }
-
-    60% {
-        transform: rotate(0.0deg) translate(0, -50%)
-    }
-
-    100% {
-        transform: rotate(0.0deg) translate(0, -50%)
-    }
-}
-
 /*
 ========================================
 Menu
@@ -1146,8 +1105,8 @@ Cases
 }
 
 .light-bg .multipe-image-block img {
-    -webkit-filter: drop-shadow(5px 5px 0.5em var(--text-light));
-    filter: drop-shadow(5px 5px 0.5em var(--text-light));
+    -webkit-filter: drop-shadow(5px 5px 0.5em var(--invert-text-light));
+    filter: drop-shadow(5px 5px 0.5em var(--invert-text-light));
 }
 
 .two-col .grid .multipe-image-block img:nth-of-type(3),
@@ -1167,10 +1126,19 @@ Cases
 .two-col .grid .single-image-block {
     grid-column: 2/12;
     grid-row: 6;
-    max-height: 100vh;
     height: auto;
     margin: 6em 0 6em 0;
 }
+
+.extended .grid .single-image-block:nth-of-type(2) {
+    grid-row: 3;
+}
+
+.extended .grid .single-image-block:nth-of-type(3) {
+    grid-row: 5;
+    height: auto;
+}
+
 
 .two-col .grid .video {
     position: relative;
@@ -1200,7 +1168,7 @@ iframe {
 
 .two-col .grid .long-image-block {
     grid-column: 2/12;
-    grid-row: 6;
+    grid-row: 9;
     height: auto;
     margin: 6em 0 6em 0;
 }
@@ -1226,6 +1194,12 @@ iframe {
     grid-column: 4/10;
     grid-row: 8;
     margin: 0 0 6em 0;
+}
+
+.extended .grid .lastP {
+    grid-column: 4/10;
+    grid-row: 8;
+    margin: 0;
 }
 
 #moreProjects {
@@ -1272,7 +1246,7 @@ iframe {
 
 #moreProjects .grid div:nth-of-type(2) img {
     position: static;
-    height: auto;
+    height: 90%;
     width: 100%;
     object-fit: contain;
     object-position: center;
@@ -1352,7 +1326,7 @@ iframe {
     }
 
     .landing .grid div:nth-of-type(1) {
-        grid-column: 2/8;
+        grid-column: 1/8;
         margin-top: 15vh;
     }
 
@@ -1366,7 +1340,7 @@ iframe {
     }
 
     .landing .grid button:not(#scroll) {
-        grid-column: 2/8;
+        grid-column: 1/8;
         grid-row: 2;
         margin: 2em 0 0 0;
     }
@@ -1395,14 +1369,14 @@ iframe {
     }
 
     .two-col .grid > div:nth-of-type(1) {
-        grid-column: 2/12;
+        grid-column: 1/13;
         grid-row: 1;
         margin: 6em 0 0 0;
     }
 
     #intro .grid .metadata,
     .two-col .grid .metadata {
-        grid-column: 2/12;
+        grid-column: 1/13;
         grid-row: 3;
         margin: 3em 0 0 0;
     }
@@ -1410,45 +1384,107 @@ iframe {
     .two-col .grid .metadata div ul {
         margin: 0.5em 0 0 0;
     }
-
+    
+    .two-col .grid .metadata div ul li {
+        display: inline-block;
+    }
+    
+/*
     .two-col .grid .metadata div:not(:first-of-type) {
         margin: 0em 0 0 1em;
     }
+*/
+    
+    .two-col .grid .metadata div:not(:first-of-type) {
+        margin: 1em 0 0 0em;
+    }
+    
+    .two-col .grid .metadata {
+/*    grid-column: 8/13;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+/*
+    z-index: 3;
+    padding: 0;
+    grid-row: 2;
+*/
+    }
+
+/*
+    .two-col .grid .metadata div {
+    flex-basis: 0;
+    flex-grow: 1;
+    }
+*/
+
+/*
+    .two-col .grid .metadata div {
+    margin: 0 1em 0 0;
+    }
+*/
 
     .two-col .grid a,
     .two-col .grid button {
-        grid-column: 2/12;
+        grid-column: 1/13;
     }
 
     .two-col .grid > a,
     #intro .grid button,
     .two-col .grid > .newPage:not(#homeLogo) {
         margin: 3em 0 0 0;
-        grid-column: 2/12;
+        grid-column: 1/13;
     }
 
     .two-col .grid p {
-        grid-column: 2/12;
+        grid-column: 1/13;
     }
 
     .projects .two-col .grid p:nth-of-type(1) {
-        grid-column: 2/12;
+        grid-column: 1/13;
         grid-row: 2;
     }
 
     .projects .two-col .grid p:nth-of-type(2) {
-        grid-column: 2/12;
+        grid-column: 1/13;
         grid-row: 3;
     }
 
     .projects .two-col .grid .lastP {
-        grid-column: 2/12;
+        grid-column: 1/13;
+    }
+    
+    .extended .grid .single-image-block:nth-of-type(2) {
+        grid-row: 4;
+    }
+    
+    .extended .grid .single-image-block:nth-of-type(3) {
+        grid-row: 7;
+    }
+    
+    .extended .grid .long-image-block {
+        grid-row: 9;
+    }
+    
+    .extended .grid p:nth-of-type(3) {
+        grid-row: 5;
+        margin-top: 0;
+    }
+    
+    .extended .grid p:nth-of-type(4) {
+        grid-row: 6;
+        grid-column: 1/13;
+    }
+    
+    .extended .grid p:nth-of-type(5) {
+        grid-row: 8;
+        margin: 0;
     }
 
     .two-col .grid img {
         display: block;
         position: static;
-        grid-column: 2/12;
+        grid-column: 1/13;
         max-width: none;
         grid-row: 6;
         width: 100%;
@@ -1476,7 +1512,7 @@ iframe {
         margin: 0 7.2vw 0 0;
         top: 50%;
         transform: translate(0, -50%);
-        grid-column: 2/12;
+        grid-column: 1/13;
         max-width: none;
         grid-row: 6;
         width: 100%;
@@ -1500,7 +1536,7 @@ iframe {
     }
 
     #menu-overlay .grid div:nth-of-type(2) {
-        grid-column: 2/12;
+        grid-column: 1/13;
         text-align: center;
     }
 
@@ -1540,11 +1576,11 @@ iframe {
     }
 
     footer .grid div:first-of-type {
-        grid-column: 2/12;
+        grid-column: 1/13;
     }
 
     footer .grid div:nth-of-type(2) {
-        grid-column: 2/12;
+        grid-column: 1/13;
         margin: 3em 0 0 0;
     }
 
@@ -1606,7 +1642,7 @@ Projects
 
     .scrollItem .grid > .newPage:not(#homeLogo) {
         margin: 3em 0 0vh 0;
-        grid-column: 2/12;
+        grid-column: 1/13;
     }
 
     #projects .back-text {
